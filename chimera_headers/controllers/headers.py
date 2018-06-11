@@ -97,7 +97,7 @@ class Headers(ChimeraObject):
         md = [('DATE-OBS', ImageUtil.formatDate(extra_header_info.get("frame_start_time",
                                                                                         datetime.datetime.utcnow())),
                'Custom. Date exposure started'),
-              ("EXPTIME", float(request['exptime']) or -1, "Custom. exposure time in seconds"),
+              ("EXPTIME", float(request['exptime']), "Custom. exposure time in seconds"),
               ('IMAGETYP', request['type'].strip(), 'Custom. Image type'),
               ('SHUTTER', str(request['shutter']), 'Custom. Requested shutter state'),
               ('INSTRUME', str(self.instrument['camera_model']), 'Custom. Name of instrument'),
